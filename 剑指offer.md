@@ -47,4 +47,19 @@
             pr1 = nums[pr1]
             pr2 = nums[pr2]
         return pr1  
+(5)二分查找+统计区间内数字的数量（But 不能确定每个数字各出现一次还是某个数字出现了2次）
+把1~n的数字从中间的数字分为2部分，1~m区间内的为part1，m+1~n区间内的为part2，统计区间内数字的数量，超过区间的长度则一定包含重复数
 
+    def findDuplicate(self, nums):
+        left, right = 1, len(nums)-1
+        while left < right:
+            mid = (left + right) >> 1
+            count = 0
+            for i in nums:
+                if i <= mid:
+                    count += 1
+            if count > mid:
+                right = mid
+            else:
+                left = mid + 1
+        return left
