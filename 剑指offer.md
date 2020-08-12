@@ -9,13 +9,15 @@
 - 是否要求找出所有重复数字？
 - 是否允许修改数组？
 - 时、空复杂度的要求？\
-<br/>https://leetcode.com/problems/find-the-duplicate-number/description/(找出一个重复数)<br/>
-<br/>https://leetcode.com/problems/find-all-duplicates-in-an-array/description/（找出所有重复数）<br/>
-<br/>https://www.lintcode.com/problem/find-the-duplicate-number/description（不允许修改数组）<br/>
+
 #### 常用解法：
-(1)排序后遍历，排序的时间复杂度至少为O(nlogn)；\
-(2)哈希表，时间复杂度O(n)，空间复杂度O(n)；\
-(3)利用数字和index的映射关系，每个数字最多只要交换2次就能找到自己的位置，时间复杂度O(n)，空间复杂度O(1),<修改了数组>；
+- 数组中只有1个重复数 or 只要求找出一个重复数
+<br/>https://leetcode.com/problems/find-the-duplicate-number/description/(找出一个重复数)<br/>
+<br/>https://www.lintcode.com/problem/find-the-duplicate-number/description（不允许修改数组）<br/>
+<br/>
+<br/>(1)排序后遍历，排序的时间复杂度至少为O(nlogn)；<br/>
+<br/>(2)哈希表，时间复杂度O(n)，空间复杂度O(n)；<br/>
+<br/>(3)利用数字和index的映射关系，每个数字最多只要交换2次就能找到自己的位置，时间复杂度O(n)，空间复杂度O(1),<修改了数组>；
 
     def findDuplicate(self, nums: List[int]) -> int:
         i = 0
@@ -29,8 +31,8 @@
                     else:
                         t = nums[i]
                         nums[i], nums[t] = nums[t], nums[i]
-
-(4)Cycle Detection;\
+<br/>
+<br/>(4)Cycle Detection;\
 相当于有环的链表找入环口。利用快、慢指针，快指针每次走2步，慢指针每次走1步，链表有环则快慢指针一定会相遇。假设起点到入环扣距离为a，入环口距离两指针相遇的点距离为b，环长为L，则有2（a+b) = a + b + kL,可得a = kL - b, 可见相遇后，将一指针从起点开始每次走1步，另一指针从相遇点开始每次走1步，则两指针会在入环口相遇。
 
     def findDuplicate(self, nums: List[int]) -> int:
@@ -46,7 +48,8 @@
             pr1 = nums[pr1]
             pr2 = nums[pr2]
         return pr1  
-(5)二分查找+统计区间内数字的数量<But 不能确定每个数字各出现一次还是某个数字出现了2次>时间复杂度O(n)，空间复杂度O(n);\
+<br/>
+<br/>(5)二分查找+统计区间内数字的数量<But 不能确定每个数字各出现一次还是某个数字出现了2次>时间复杂度O(n)，空间复杂度O(n);\
 把1-n的数字从中间的数字分为2部分，[1,m]区间内的为part1，[m+1,n]区间内的为part2，统计区间内数字的数量，超过区间的长度则一定包含重复数
 
     def findDuplicate(self, nums):
@@ -62,3 +65,7 @@
             else:
                 left = mid + 1
         return left
+<br/>
+
+- 找到所有重复元素
+<br/>https://leetcode.com/problems/find-all-duplicates-in-an-array/description/（找出所有重复数）<br/>
