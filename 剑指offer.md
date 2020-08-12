@@ -1,6 +1,7 @@
 # 剑指offer
 - 😊基于python语言实现😺
-- 建议先练习一些数据结构（链表、树、栈和队列、哈希表、字符串、数组与矩阵、图、位运算）以及算法思想（双指针、排序、贪心思想、二分查找、分治、搜索、动态规划、数学）相关的题，推荐follow https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E7%9B%AE%E5%BD%95.md
+- 建议先练习一些数据结构（链表、树、栈和队列、哈希表、字符串、数组与矩阵、图、位运算）以及算法思想（双指针、排序、贪心思想、二分查找、分治、搜索、动态规划、数学）相关的题，推荐follow 
+<br/>https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E7%9B%AE%E5%BD%95.md<br/>
 - 最后把剑指offer当做一个练兵场，进一步总结一些解题模板，重在吃透、多解法
 ---
 ## 3.数组中的重复数字
