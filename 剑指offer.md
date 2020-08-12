@@ -7,9 +7,9 @@
 - 是否要求找出所有重复数字？
 - 是否允许修改数组？
 - 时、空复杂度的要求？\
-https://leetcode.com/problems/find-the-duplicate-number/description/(找出一个重复数)\
-https://leetcode.com/problems/find-all-duplicates-in-an-array/description/（找出所有重复数）\
-https://www.lintcode.com/problem/find-the-duplicate-number/description（不允许修改数组）
+<br/>https://leetcode.com/problems/find-the-duplicate-number/description/(找出一个重复数)<br/>
+<br/>https://leetcode.com/problems/find-all-duplicates-in-an-array/description/（找出所有重复数）<br/>
+<br/>https://www.lintcode.com/problem/find-the-duplicate-number/description（不允许修改数组）<br/>
 #### 常用解法：
 (1)排序后遍历，排序的时间复杂度至少为O(nlogn)；\
 (2)哈希表，时间复杂度O(n)，空间复杂度O(n)；\
