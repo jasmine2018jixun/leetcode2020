@@ -11,7 +11,7 @@
 - 时、空复杂度的要求？\
 
 #### 常用解法：
-- 数组中只有1个重复数 or 只要求找出一个重复数
+- 情形1：数组中只有1个重复数 or 只要求找出一个重复数
 <br/>https://leetcode.com/problems/find-the-duplicate-number/description/(找出一个重复数)<br/>
 <br/>https://www.lintcode.com/problem/find-the-duplicate-number/description（不允许修改数组）<br/>
 
@@ -72,5 +72,5 @@
         return left
     ```
 
-- 找到所有重复元素
+- 情形2：找到所有重复元素,不用到任何额外空间并在O(n)时间复杂度
 <br/>https://leetcode.com/problems/find-all-duplicates-in-an-array/description/（找出所有重复数）<br/>
